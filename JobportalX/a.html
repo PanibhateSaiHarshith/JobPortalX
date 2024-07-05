@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>JSAP</title>
+    <link rel="icon" type="image/x-icon" href="/logo.png.jpg">
+    <link rel="stylesheet" type="text/css" href="a.css">
+</head>
+<body>
+    <div class="main-content">
+        <nav class="navBar">
+            <a href="#" class="logo"><img src="logo5.png" alt="Logo"></a>
+            <ul class="navList">
+                <li class="dropdown">
+                    <a href="#"><i class="fa-solid fa-list"></i> <span><b>Job categories</b></span></a>
+                    <div class="dropdown-content">
+                        <a href="gov.html">Govt Sector</a>
+                        <a href="it.html">IT Sector</a>
+                        <a href="medical.html">Medical Sector</a>
+                        <a href="def.html">Defence Sector</a>
+                        <a href="bank.html">Bank Sector</a>
+                    </div>
+                </li>
+                <li><a href="not.html"><i class="fa-solid fa-bell"></i> <span><b>Notifications</b></span></a></li>
+            </ul>
+            <!-- Search Form -->
+            <form class="searchForm" id="searchForm" action="/search" method="get">
+                <input type="text" name="query" placeholder="Find opportunities">
+                <input type="text" name="location" placeholder="Location">
+                <button type="submit"><i id="searchIcon" class="fa fa-search"></i></button>
+            </form>
+            
+            <div class="navbar">    
+                <button class="open-btn" onclick="openNav()">☰</button>
+            </div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+                <div class="profile">
+                    <img src="logo4.png" alt="Profile Image">   
+                </div>
+                <hr>
+                <br>
+                <a href="javascript:void(0)" onclick="openSignupChoicePopup(); closeNav()"><i class="fas fa-user-plus"></i><span>Sign Up</span></a>
+                <a href="javascript:void(0)" onclick="openSigninPopup(); closeNav()"><i class="fa-solid fa-right-to-bracket"></i><span> Sign In</span></a>
+            </div>
+        </nav>
+        <br>
+        <div class="box">
+            <h1>Job PortalX</h1>
+        </div>
+        <br>
+        <h2>Where techies realise their true Potential</h2>
+        <br>
+        <h3><b>Look beyond the obvious. Use Cutshort to easily get discovered by<br>
+                awesome companies and get referred to job positions very few know about.</b> </h3>
+        <br>
+        <div id="signupChoicePopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeSignupChoicePopup()">&times;</span>
+                <h2>Sign Up</h2>
+                <br>
+                <br>
+                <div class="button-container">
+                    <div class="signup-option">
+                        <img src="signup.png" alt="Student">
+                        <button onclick="showStudentSignup()">Sign Up as Student</button>
+                    </div>
+                    <div class="signup-option">
+                        <img src="signup2.png" alt="Employee">
+                        <button onclick="showEmployeeSignup()">Sign Up as Employee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="signinPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeSigninPopup()">&times;</span>
+                <h2>Sign In</h2>
+                <br>
+                <br>
+                <div class="button-container">
+                    <div class="signup-option">
+                        <img src="signup.png" alt="Student">
+                        <button onclick="showStudentSignin()">Sign In as Student</button>
+                    </div>
+                    <div class="signup-option">
+                        <img src="signup2.png" alt="Employee">
+                        <button onclick="showEmployeeSignin()">Sign In as Employee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="signupStudentPopup" class="popup">
+        <div class="popup-content">
+            <center>
+            <span class="close" onclick="closeSignupPopup('signupStudentPopup')">&times;</span>
+            <h2>Sign Up as Student</h2>
+            <br>
+            <!-- Student Signup Form -->
+            <form id="studentSignupForm" action="/submit-student-signup" method="post">
+                <!-- Add your student signup form fields here -->
+                <label for="studentName">First Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+                <label for="studentName">Last Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+                <label for="studentEmail">Email:</label>
+                <input type="email" id="studentEmail" name="studentEmail" required>
+                <label for="User Mobile No">Mobile Number:</label>
+                <input type="Mobile No" id="UsermobileNO" name="User Mobile No" required>
+                <input type="submit" value="Submit">
+            </form>
+        </center>
+        </div>
+    </div>
+    <center>
+    <div id="signupEmployeePopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSignupPopup('signupEmployeePopup')">&times;</span>
+            <h2>Sign Up as Employee</h2>
+            <br>
+            <br>
+            <!-- Employee Signup Form -->
+            <form id="employeeSignupForm" action="/submit-employee-signup" method="post">
+                <!-- Add your employee signup form fields here -->
+                <label for="employeeName">Name:</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+                <label for="employeeEmail">Email:</label>
+                <input type="email" id="employeeEmail" name="employeeEmail" required>
+                <input type="submit" value="Submit">
+            </form>
+        </center>
+        </div>
+    </div>
+    <br>
+    <section class="facilities">
+        <h1><center>CATEGORIES</center></h1>
+        <div class="row">
+            <div class="facilities-col">
+                <a href="it_high_paying_jobs_page.html">
+                    <div class="grow">
+                        <img src="logos.png.jpg">
+                    </div>
+                    <h3><center>IT High Paying JOBS</center></h3>
+                </a>
+            </div>
+            <div class="facilities-col">
+                <a href="banking_jobs_page.html">
+                    <div class="grow">
+                        <img src="Banking-Jobs.webp">
+                    </div>
+                    <h3><center>Banking JOBS</center></h3>
+                </a>
+            </div>
+            <div class="facilities-col">
+                <a href="ssc_jobs_page.html">
+                    <div class="grow">
+                        <img src="ssc.jpg">
+                    </div>
+                    <h3><center>SSC JOBS</center></h3>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="facilities-col">
+                <a href="it_jobs_page.html">
+                    <div class="grow">
+                        <img src="it.jpg">
+                    </div>
+                    <h3><center>IT JOBS</center></h3>
+                </a>
+            </div>
+            <div class="facilities-col">
+                <a href="government_jobs_page.html">
+                    <div class="grow">
+                        <img src="govt3.png">
+                    </div>
+                    <h3><center>Government JOBS</center></h3>
+                </a>
+            </div>
+            <div class="facilities-col">
+                <a href="medical_jobs_page.html">
+                    <div class="grow">
+                        <img src="medi - Copy.jpg">
+                    </div>
+                    <h3><center>Medical JOBS</center></h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <h2><center>About Us</center></h2>
+        <div class="content-wrapper">
+            <div class="text-container">
+                <p>JobPortalX is an online platform that connects job seekers with employers. It offers a user-friendly interface where job seekers can search for employment opportunities based on various criteria such as job title, location, industry, and company. Employers can post job listings and search for potential candidates to fill their vacancies. JobPortalX may also provide additional features such as resume building tools, career advice articles,
+                    and interview preparation resources to assist both job seekers and employers in the recruitment process.</p>
+   </div>
+        </div>
+    </section>
+    <footer>
+        <a href="mailto:JobPortalX.com">JobPortalX@gmail.com</a></p>
+       <h> contact us:987654321 </h><br>
+        &copy; 2024 JobPortalX. All rights reserved.
+        <p1>
+                    @Sai Harshith Panibhate-9618870454
+                </p1>
+        <div class="image-container">
+            <img src="logo5.png" alt="About Us Image" style="max-width:80%; height:40px;">
+            <p>@jobsearch and application platform</p>
+        </div>
+      </footer>    
+    <script src="a.js"></script>
+</body>
+</html>

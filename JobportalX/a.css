@@ -1,0 +1,454 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("bg.webp");
+  background-size: cover;
+  overflow-x: hidden;
+}
+.box {
+padding: 10px; /* Padding around the content */
+border-radius: 50px; /* Rounded corners for the box */
+box-shadow: 0 4px 8px rgb(27, 0, 100); /* Optional: Adds a shadow effect */
+display: flex; /* Use flexbox */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+width: fit-content; /* Set width to fit content */
+margin: 0 auto; /* Center horizontally */
+}
+h1 {
+
+background-size:40px;
+
+}
+h2{
+  text-align: center;
+  font-size: 40px;
+}
+h3{
+text-align: center;
+color: rgb(0, 0, 0);
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+form { 
+  margin-bottom: 20px;
+  text-align: center;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.navBar {
+  background-color: rgb(238, 237, 231);
+  display: flex;
+  justify-content: space-between; /* Align items to both ends of the navbar */
+  align-items: center; /* Vertically center items */
+  padding: 5px 5px;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  margin-right: auto; /* Pushes the list items to the left */
+}
+.navList li {
+   margin-right: 50px;
+}
+.navList li a {
+  color: rgb(0, 1, 10);
+  font-weight: 500;
+  padding: 10px;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 30px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color:#969494;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .close-btn {
+  position: absolute;
+  top: 0;
+  right: 15px; 
+  font-size: 36px;
+  margin-left: 30px;
+}
+.open-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(14, 0, 0);
+  border: none !important; /* Ensure border is set to none */
+  padding: 10px 15px;
+}
+.show {
+  display: block;
+}
+.logo{
+margin-left: 40px;
+margin-right:60px;
+}
+.logo img {
+height: 80px; 
+width: 150px;
+}
+.navBar li :hover{
+color: rgb(39, 4, 196);
+}
+.profile {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #555;
+  position: relative;
+}
+.profile img {
+  width: 180px;
+  height: 150px;
+}
+.profile-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sidebar a span {
+  margin-left: 15px;
+}
+
+.search-Form {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto; 
+max-width: 500px; 
+}
+.search-Form input[type="text"] {
+  padding-right: 30px; /* Add space for the search button */
+  width: 300px;
+font-size: 17px;
+border: none;
+outline: none;
+border-radius: 20px 0 0 20px;
+width: 260%; /* Take up remaining space */
+}
+.searchInput {
+  position:absolute; /* Position relative for absolute positioning of button */
+  display: inline-block;
+}
+.searchForm button {
+padding: 10px;
+font-size: 17px;
+border: none;
+outline: none;
+cursor: pointer;
+background-color: rgb(64, 0, 182);
+color: rgb(255, 255, 255);
+border-radius: 0 20px 20px 0;
+}
+.searchForm button:hover {
+background-color: rgb(58, 4, 158); /* Darker shade for hover effect */
+}
+
+.searchForm.active {
+display: flex;
+}
+.dropdown {
+position: relative;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ffffff;
+min-width: 150px;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+overflow: hidden;
+z-index: 1;
+top: 150%; /* Position the dropdown below the link */
+left: 0; /* Align the dropdown with the link */
+opacity: 0;
+transform: translateY(-10px);
+transition: opacity 0.3s, transform 0.3s;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+.dropdown-content a {
+color: #080000;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+transition: background-color 0.3s;
+}
+.dropdown-content a:hover {
+background-color: #f3f3f3;
+}
+
+body {
+margin: 0px;
+padding: 0;
+}
+.circle-wrapper {
+position:absolute;
+top:10;
+left:30;
+padding: 0px; /* Adjust padding as needed */
+}
+.circle-image {
+width: 350px; /* Adjust width and height as needed */
+height: 200px;
+border-radius: 100% /* This creates the circular shape */
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.popup-content {
+  position: relative; 
+  background-image: url('logo6.jpg'); /* Add background image */
+ background-size: cover;
+  background-color: #ffffffcd;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+}
+.popup-content h2 {
+  text-align: center;
+}
+
+.popup-content button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px; 
+  background-color: #140101;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background-color: #cb9b3a;
+}
+.popup-content .button-container {
+  display: flex;
+  justify-content: space-around; /* This will space out the buttons equally */
+  padding: 10px; /* Add some padding around the container */
+}
+.popup-content .button-container .signup-option {
+  flex: 1;
+  text-align: center; /* Center-aligns the content of each signup option */
+  margin: 15px;
+}
+.popup-content .button-container .signup-option img {
+  width: 120px; /* Adjust as necessary */
+  height: 100px; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between the image and the button */
+}
+.popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px; /* Adjust as necessary */
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: #070000;
+}
+.popup-content .close:hover {
+  color: #5a0404; /* Change color on hover */
+}
+.main-container {
+  width: 100%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 30px; /* Add some padding for content */
+  background-color: #c4c46255; /* Set the background color */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(116, 115, 115, 0.568); /* Semi-transparent black */
+  backdrop-filter: blur(0px); /* Increase the blur effect */
+  z-index: 999; /* Ensure the blur layer is above other content */
+}
+.popup {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#dbdbdb48;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.about-us {
+  background-color: #db9d40; /* Choose your desired background color */
+  padding: 20px; /* Add some padding for better readability */
+  border-radius: 10px; /* Add rounded corners for a nicer look */
+  text-align: center;
+}
+
+.content-wrapper {
+  display:inline-flex; /* Use flexbox layout */
+  justify-content: center; /* Center-align flex items horizontally */
+  align-items:end; /* Center-align flex items vertically */
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line if needed */
+}
+
+.image-container, .text-container {
+  flex: 1; /* Each container takes up equal space */
+ 
+}
+.image-container img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain aspect ratio */
+  display:flex; /* Remove extra space below the image */
+  margin: 10px; /* Center the image horizontally */
+}
+.popup-content form {
+  width: 300px; /* Adjust the width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding to the form */
+  border-radius: 30px; /* Add border radius to the form */
+  box-shadow: 0 0 20px rgb(172, 96, 15); /* Add box shadow to the form */
+}
+.popup-content form label {
+  display: block; /* Display labels as block elements */
+  margin-bottom: 5px; /* Add spacing between labels */
+  font-weight: bold; /* Make labels bold */
+}
+.popup-content form input[type="text"],
+.popup-content form input[type="email"],
+.popup-content form input[type="password"],
+.popup-content form input[type="tel"] {
+  width: calc(100% - 22px); /* Make the input fields fill the entire width of the form */
+  padding: 10px; /* Adjust the padding inside the input fields */
+  margin-bottom: 15px; /* Add spacing between input fields */
+  border: 1px solid #b8641f84; /* Add a border around the input fields */
+  border-radius: 5px; /* Add rounded corners to the input fields */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+.popup-content {
+  position: relative; /* Ensure relative positioning for absolute positioning within */
+}
+.popup-content form input[type="submit"] {
+  position:relative;
+  bottom: 1px; /* Adjust as needed */
+  left: 20%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 30%;
+  padding: 10px; /* Adjust padding for better spacing */
+  background-color: #370e91;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.popup-content form input[type="submit"]:hover {
+  background-color: #00b303; 
+}
+.footer-content {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+.footer-section ul li a {
+  color: #fff; /* Change to your desired link color */
+  text-decoration: none;
+}
+.footer-bottom {
+  margin-bottom: 200px;
+  font-size: 20px;
+}
+footer {
+  position:static;
+  bottom: 0px;
+  width: 100%;
+  background-color: #463a2ad5; /* Change to your desired background color */
+  color: #ffffff; /* Change to your desired text color */
+  padding: 20px 0; /* Adjust as needed */
+  text-align: center;
+}
+section {
+  padding: 10px;
+}
+.Categories {
+  margin-bottom: 5px;
+}
+.row{
+  margin-top: 2%;
+  display:flex;
+  justify-content:center;
+}
+.facilities{
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+.facilities .row .facilities-col{
+  width:30%;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.facilities .row .facilities-col img{
+  width:25vw;
+  border-radius: 10px;
+  height:15vw;
+}
+.grow img{
+  transition: 1s ease;
+  }
+  .grow img:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+  }
